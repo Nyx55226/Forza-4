@@ -20,6 +20,8 @@ public class Main extends javax.swing.JFrame {
     Image rosso=Rosso.getImage().getScaledInstance(74, 74, Image.SCALE_SMOOTH);
     ImageIcon Giallo=new ImageIcon(getClass().getResource("/Img/Giallo.png"));
     Image giallo=Giallo.getImage().getScaledInstance(74, 74, Image.SCALE_SMOOTH);
+    ImageIcon imageIcon=new ImageIcon(getClass().getResource("/img/Java_F4.png"));
+    Image icon=imageIcon.getImage().getScaledInstance(64, 64, Image.SCALE_SMOOTH);
     private Gioco gioco=new Gioco();
     private JLabel[][] grigliaGUI=new JLabel[6][7];
     private int punteggioRosso=0;
@@ -28,6 +30,7 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     public Main() {
+        this.setIconImage(icon);
         initComponents();
         setupKeyBindings();
         LafManager.install(new IntelliJTheme());
